@@ -45,9 +45,17 @@ def get_data(link):
 
 def main():
     cidrs = get_data(IPRANGE_URLS)
-    with open(r'cidrs/china_route.txt', 'w') as f:
-        for ip in cidrs:
-            f.write(f"{str(ip)}\n")
+    network_f = open(r'cidrs/china_route.txt', 'w')
+    routeos_file = open(r'cidrs/mikrotik_china_route.txt', 'w')
+    for ip_network in cidrs:
+        ip_network = str(ip_network)
+        # 保存纯网段
+        network_f.write(f"{ip_network}\n")
+        # 保存成RouteOS脚本
+        routeos_file.write(
+            f"/ip route add distance=20 dst-address={ip_network} gateway=$iknowtheGW comment=China_Route;\n")
+    network_f.close()
+    routeos_file.close()
 
 
 if __name__ == "__main__":
