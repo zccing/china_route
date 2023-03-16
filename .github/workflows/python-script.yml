@@ -16,6 +16,8 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.10.6' # 选择Python版本
+    - name: Install dependencies
+      run: pip3 install -r requirements.txt
     - name: Run script
       run: python china_cidr.py # 执行Python脚本
     - name: Commit files
