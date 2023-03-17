@@ -23,6 +23,7 @@ jobs:
     - name: Commit files
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         commit_message: 'GitHub Actions Update cidr files' # 提交信息
         commit_options: '--no-verify'
         file_pattern: 'cidrs/*' # 选择需要提交的文件
