@@ -20,10 +20,14 @@ jobs:
       run: pip3 install -r requirements.txt
     - name: Run script
       run: python china_cidr.py # 执行Python脚本
-    - name: Commit files
-      uses: stefanzweifel/git-auto-commit-action@v4
+
+    - name: Set up Git
+        run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -a -m "Auto commit"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        commit_message: 'GitHub Actions Update cidr files' # 提交信息
-        commit_options: '--no-verify'
-        file_pattern: 'cidrs/*' # 选择需要提交的文件
+        branch: main
