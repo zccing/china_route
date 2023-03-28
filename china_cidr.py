@@ -5,15 +5,20 @@ import requests
 
 
 IPRANGE_URLS = {'ipip.net': 'https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt',
-                'apnic': 'https://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest'}
+                'apnic': ['https://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest', 
+                          'https://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-extended-latest',
+                          'https://ftp.apnic.net/stats/ripe-ncc/delegated-ripencc-extended-latest',
+                          'https://ftp.apnic.net/stats/ripe-ncc/delegated-ripencc-latest']}
 
 
 def fetch_apnic_data():
     print("Fetching data from apnic.net, it might take a few minutes, please wait...")
-    data = requests.get(IPRANGE_URLS.get('apnic')).text
+    apnic_data = ''
+    for url in IPRANGE_URLS.get('apnic'):
+        apnic_data += requests.get(url).text
     cnregex = re.compile(
         r'apnic\|cn\|ipv4\|[0-9\.]+\|[0-9]+\|[0-9]+\|a.*', re.IGNORECASE)
-    cndata = cnregex.findall(data)
+    cndata = cnregex.findall(apnic_data)
     results = []
     for item in cndata:
         unit_items = item.split('|')
@@ -45,17 +50,17 @@ def get_data(link):
 
 def main():
     cidrs = get_data(IPRANGE_URLS)
-    network_f = open(r'cidrs/china_route.txt', 'w')
-    routeos_file = open(r'cidrs/mikrotik_china_route.txt', 'w')
+    raw = open(r'cidrs/raw/china_cidr.txt', 'w+')
+    mikrotik_route = open(r'cidrs/mikrotik/china_route.txt', 'w+')
     for ip_network in cidrs:
         ip_network = str(ip_network)
         # 保存纯网段
-        network_f.write(f"{ip_network}\n")
+        raw.write(f"{ip_network}\n")
         # 保存成RouteOS脚本
-        routeos_file.write(
+        mikrotik_route.write(
             f"/ip route add distance=20 dst-address={ip_network} gateway=$iknowtheGW comment=China_Route;\n")
-    network_f.close()
-    routeos_file.close()
+    raw.close()
+    mikrotik_route.close()
 
 
 if __name__ == "__main__":

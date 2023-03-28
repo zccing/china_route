@@ -21,8 +21,17 @@ jobs:
     - name: Install dependencies
       run: pip3 install -r requirements.txt
 
-    - name: Run script
-      run: python china_cidr.py # 执行Python脚本
+    - name: Run china_cidr script
+      run: python china_cidr.py
+
+    - name: Run github_cidr script
+      run: python github_cidr.py # 执行Python脚本
+
+    - name: Run google_cidr script
+      run: python google_cidr.py # 执行Python脚本
+
+    - name: Run office365_cidr script
+      run: python office365_cidr.py # 执行Python脚本
 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
