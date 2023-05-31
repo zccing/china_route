@@ -6,6 +6,8 @@
 /ip route add distance=20 dst-address=40.73.161.0/24 gateway=$iknowtheGW comment=China_Route_office365;
 /ip route add distance=20 dst-address=40.73.164.128/25 gateway=$iknowtheGW comment=China_Route_office365;
 /ip route add distance=20 dst-address=40.73.165.0/26 gateway=$iknowtheGW comment=China_Route_office365;
+/ip route add distance=20 dst-address=40.73.240.0/24 gateway=$iknowtheGW comment=China_Route_office365;
+/ip route add distance=20 dst-address=40.73.242.0/24 gateway=$iknowtheGW comment=China_Route_office365;
 /ip route add distance=20 dst-address=40.73.248.0/21 gateway=$iknowtheGW comment=China_Route_office365;
 /ip route add distance=20 dst-address=42.159.4.45/32 gateway=$iknowtheGW comment=China_Route_office365;
 /ip route add distance=20 dst-address=42.159.4.50/32 gateway=$iknowtheGW comment=China_Route_office365;
