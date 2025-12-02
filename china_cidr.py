@@ -4,7 +4,11 @@ import math
 import requests
 
 
-IPRANGE_URLS = {'ipip.net': 'https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt',
+IPRANGE_URLS = {'github': ['https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt',
+                          'https://github.com/misakaio/chnroutes2/raw/refs/heads/master/chnroutes.txt'
+                          'https://metowolf.github.io/iplist/data/special/china.txt',
+                          'https://github.com/zhufengme/block_cn_files/raw/refs/heads/master/cn_ip_list.txt',
+                          'https://github.com/gaoyifan/china-operator-ip/raw/refs/heads/ip-lists/china.txt']
                 'apnic': ['https://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest', 
                           'https://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-extended-latest',
                           'https://ftp.apnic.net/stats/ripe-ncc/delegated-ripencc-extended-latest',
@@ -29,11 +33,12 @@ def fetch_apnic_data():
     return results
 
 
-def fetch_ipip_data():
-    data = requests.get(IPRANGE_URLS.get('ipip.net')).text
+def fetch_github_data():
+    github_cn = requests.get(IPRANGE_URLS.get('github'))
     ipip_cidrs = []
-    for cidr in data.split():
-        ipip_cidrs.append(ipaddress.ip_network(cidr))
+    for url in github_cn:
+      for cidr in url.text.split():
+          ipip_cidrs.append(ipaddress.ip_network(cidr))
     return ipip_cidrs
 
 
@@ -41,7 +46,7 @@ def get_data(link):
     # 获取apnic的数据
     apnic_cidrs = fetch_apnic_data()
     # 获取ipip.net的开源数据
-    ipip_cidrs = fetch_ipip_data()
+    ipip_cidrs = fetch_github_data()
     # 汇总合并
     cidrs = apnic_cidrs + ipip_cidrs
     summarized_networks = ipaddress.collapse_addresses(cidrs)
