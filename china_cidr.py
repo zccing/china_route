@@ -28,6 +28,7 @@ CN_IP_REGEX = re.compile(r'apnic\|cn\|ipv4\|([0-9.]+)\|(\d+)\|', re.IGNORECASE)
 # 输出文件路径
 RAW_OUTPUT = 'cidrs/raw/china_cidr.txt'
 MIKROTIK_OUTPUT = 'cidrs/mikrotik/china_route.txt'
+IPSET_OUTPUT = 'cidrs/ipset/china_ipset.txt'
 
 
 def get_proxies() -> dict | None:
@@ -121,6 +122,10 @@ def get_china_cidrs() -> list[ipaddress.IPv4Network]:
 
 def save_results(cidrs: list[ipaddress.IPv4Network]) -> None:
     """保存结果到文件"""
+    # 确保输出目录存在
+    os.makedirs(os.path.dirname(MIKROTIK_OUTPUT), exist_ok=True)
+    os.makedirs(os.path.dirname(RAW_OUTPUT), exist_ok=True)
+    
     with open(RAW_OUTPUT, 'w', encoding='utf-8') as raw_file, \
          open(MIKROTIK_OUTPUT, 'w', encoding='utf-8') as mikrotik_file:
         
