@@ -9,10 +9,10 @@ import requests
 IPRANGE_URLS = {
     'github': [
         'https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt',
-        'https://github.com/misakaio/chnroutes2/raw/refs/heads/master/chnroutes.txt',
+        'https://raw.githubusercontent.com/misakaio/chnroutes2/refs/heads/master/chnroutes.txtt',
         'https://metowolf.github.io/iplist/data/special/china.txt',
-        'https://github.com/zhufengme/block_cn_files/raw/refs/heads/master/cn_ip_list.txt',
-        'https://github.com/gaoyifan/china-operator-ip/raw/refs/heads/ip-lists/china.txt'
+        'https://raw.githubusercontent.com/zhufengme/block_cn_files/refs/heads/master/cn_ip_list.txt',
+        'https://raw.githubusercontent.com/gaoyifan/china-operator-ip/refs/heads/ip-lists/china.txt'
     ],
     'apnic': [
         'https://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest',
