@@ -809,7 +809,6 @@
 /ip route add distance=20 dst-address=44.31.216.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=44.32.103.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=44.32.143.0/24 gateway=$iknowtheGW comment=China_Route;
-/ip route add distance=20 dst-address=44.32.188.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=44.32.191.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=44.32.192.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=45.9.11.0/24 gateway=$iknowtheGW comment=China_Route;
@@ -4706,7 +4705,6 @@
 /ip route add distance=20 dst-address=150.248.0.0/16 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=150.255.0.0/16 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=151.242.10.0/24 gateway=$iknowtheGW comment=China_Route;
-/ip route add distance=20 dst-address=151.243.22.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=151.243.25.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=152.104.128.0/17 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=152.136.0.0/16 gateway=$iknowtheGW comment=China_Route;
@@ -5124,6 +5122,7 @@
 /ip route add distance=20 dst-address=192.163.11.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=192.178.108.222/31 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=192.197.113.0/24 gateway=$iknowtheGW comment=China_Route;
+/ip route add distance=20 dst-address=192.232.34.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=192.232.97.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=193.112.0.0/16 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=193.119.0.0/19 gateway=$iknowtheGW comment=China_Route;
