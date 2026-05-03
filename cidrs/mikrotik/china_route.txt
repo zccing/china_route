@@ -1162,6 +1162,7 @@
 /ip route add distance=20 dst-address=87.76.222.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=87.254.207.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=91.234.36.0/24 gateway=$iknowtheGW comment=China_Route;
+/ip route add distance=20 dst-address=93.95.117.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=93.113.109.8/29 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=93.113.109.24/29 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=93.113.109.104/29 gateway=$iknowtheGW comment=China_Route;
@@ -4359,6 +4360,7 @@
 /ip route add distance=20 dst-address=140.255.0.0/16 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=142.70.0.0/16 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=142.86.0.0/16 gateway=$iknowtheGW comment=China_Route;
+/ip route add distance=20 dst-address=143.20.246.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=143.64.0.0/16 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=144.0.0.0/16 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=144.7.0.0/16 gateway=$iknowtheGW comment=China_Route;
@@ -4388,7 +4390,6 @@
 /ip route add distance=20 dst-address=144.178.30.48/28 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=144.225.186.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=144.255.0.0/16 gateway=$iknowtheGW comment=China_Route;
-/ip route add distance=20 dst-address=145.6.0.0/16 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=145.14.71.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=145.14.72.0/22 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=145.14.81.0/24 gateway=$iknowtheGW comment=China_Route;
@@ -4856,6 +4857,7 @@
 /ip route add distance=20 dst-address=194.138.136.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=194.138.202.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=194.138.245.0/24 gateway=$iknowtheGW comment=China_Route;
+/ip route add distance=20 dst-address=194.231.140.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=198.175.100.0/22 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=198.208.17.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=198.208.19.0/24 gateway=$iknowtheGW comment=China_Route;
