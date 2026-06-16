@@ -1189,6 +1189,7 @@
 /ip route add distance=20 dst-address=75.75.236.0/29 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=78.105.147.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=78.105.182.0/23 gateway=$iknowtheGW comment=China_Route;
+/ip route add distance=20 dst-address=78.154.108.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=81.68.0.0/14 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=81.173.18.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=81.173.20.0/22 gateway=$iknowtheGW comment=China_Route;
@@ -1196,6 +1197,7 @@
 /ip route add distance=20 dst-address=82.22.31.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=82.108.198.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=82.109.96.0/23 gateway=$iknowtheGW comment=China_Route;
+/ip route add distance=20 dst-address=82.110.98.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=82.110.234.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=82.156.0.0/15 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=86.38.235.0/24 gateway=$iknowtheGW comment=China_Route;
@@ -6559,6 +6561,7 @@
 /ip route add distance=20 dst-address=212.189.97.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=213.199.169.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=213.210.55.0/24 gateway=$iknowtheGW comment=China_Route;
+/ip route add distance=20 dst-address=216.75.87.0/24 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=218.0.0.0/11 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=218.56.0.0/13 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=218.64.0.0/11 gateway=$iknowtheGW comment=China_Route;
