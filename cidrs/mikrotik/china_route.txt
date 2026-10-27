@@ -2431,7 +2431,6 @@
 /ip route add distance=20 dst-address=103.97.192.0/22 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=103.97.228.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=103.98.0.0/23 gateway=$iknowtheGW comment=China_Route;
-/ip route add distance=20 dst-address=103.98.28.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=103.98.40.0/21 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=103.98.48.0/22 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=103.98.56.0/22 gateway=$iknowtheGW comment=China_Route;
@@ -2601,7 +2600,6 @@
 /ip route add distance=20 dst-address=103.116.138.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=103.116.148.0/22 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=103.116.184.0/22 gateway=$iknowtheGW comment=China_Route;
-/ip route add distance=20 dst-address=103.116.206.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=103.116.220.0/22 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=103.116.224.0/21 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=103.117.16.0/22 gateway=$iknowtheGW comment=China_Route;
@@ -5063,7 +5061,6 @@
 /ip route add distance=20 dst-address=163.204.0.0/16 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=163.223.28.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=163.223.32.0/23 gateway=$iknowtheGW comment=China_Route;
-/ip route add distance=20 dst-address=163.223.72.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=163.223.124.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=163.223.156.0/23 gateway=$iknowtheGW comment=China_Route;
 /ip route add distance=20 dst-address=163.223.173.0/24 gateway=$iknowtheGW comment=China_Route;
